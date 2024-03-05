@@ -1,0 +1,4 @@
+Executing command: logger -p cron.info Message sent by grader script 797ddf04-3537-4106-860e-72b50496f49b
+Test content not found in:/log/cron. Retrying ...
+Test content found in:/log/cron
+Final grade:25.0

@@ -1,0 +1,7 @@
+Executing command: logger -p cron.info Message sent by grader script 797ddf04-3537-4106-860e-72b50496f49b
+Test content not found in:/log/cron. Retrying ...
+Test content found in:/log/cron
+Final grade:25.0
+
+===
+aByvyFL9qha/GdbHEfBLNi+qlos8OeLdR+jeSP1L4BekqsNrn5trMclDmL2WJZ4UkRt5dfSDhIg2ohkKBl6vI8smd8Tt4WB3+oF+q/xHi3CHC1C1XQHfo6cev69exIjulAAnlDu1t7Jsj4GQtgffaXWyeLPlhKz+gUD3B6tvSTe/o6Nz5jDfslcsV7Y5uSZcqq3LyUA+n8G+w8CNlhGansmUMRxyPH30TRLZ/RGryT3Q9m6dx+FQj7GNgKcF4SFA2sX7sDuaUSXugz61ZjiWdZMh7uIJPHXRMqDmr7ceRD8=
