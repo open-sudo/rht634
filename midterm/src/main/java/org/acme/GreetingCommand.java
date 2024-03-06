@@ -486,22 +486,31 @@ public  void generateSignedContent(String file, String mac) throws Exception{
 
          float archive=archiveExists(archives,sizes);
          total+=archive;
-         float sl1=selinux1();
+         p("Archive: "+archive);
+	 float sl1=selinux1();
+	 p("SeLinux task 1: "+sl1);
          total+=sl1;
          float sl2=selinux2();
+	 p("SeLinux task 2: "+sl2);
          total+=sl2;
 
          float at=at();
+	 p("Single occu job: "+at);
          total+=at;
          float crontab=cron();
+
+	 p("Multipe occu job: "+crontab);
          total+=crontab;
 
          float tune=tuning();
+	 p("Tuning: "+tune);
          total+=tune;
          float vol=volume();
+	 p("Storage: "+vol);
          total+=vol;
          float redirection=evaluateCronRedirection();
          total+=redirection;
+	 p("SeLinux task 3: "+redirection);
          System.out.println("Final grade:"+total);
 		  generateSignedContent("./output.txt",getMacAddress());
       }catch(Exception e){
