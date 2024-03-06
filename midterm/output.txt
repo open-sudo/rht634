@@ -1,8 +1,0 @@
-No folder found:/www/content
-No folder found:/var/log/kubernetes
-Task 3.1 not satisfied
-Schedule not found for 5:15am
-tuned daemon properly installed
-File not found:/tmp/tuning-profiles
-Wrong partition label found for /dev/vdb:
-Final grade:2.5
