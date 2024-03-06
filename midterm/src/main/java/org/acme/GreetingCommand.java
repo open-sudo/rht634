@@ -272,7 +272,7 @@ public  void generateSignedContent(String file, String mac) throws Exception{
         int count=0;
         for(String path:paths){
             File file= new File(path);
-            if(file.exists() && file.length()>=sizes[count]-10000 && file.length()<=sizes[count]+10000){
+            if(file.exists() && file.length()>=sizes[count]-1000000 && file.length()<=sizes[count]+1000000){
                 p("File found:"+path);
                 grade+=inc;
             }else{
