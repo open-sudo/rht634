@@ -275,7 +275,9 @@ public  void generateSignedContent(String file, String mac) throws Exception{
             if(file.exists() && file.length()>=sizes[count]-10000 && file.length()<=sizes[count]+10000){
                 p("File found:"+path);
                 grade+=inc;
-            }
+            }else{
+               p("File not found with right size: "+path);
+	    }
             count++;
         }
         return grade;
@@ -456,7 +458,7 @@ public  void generateSignedContent(String file, String mac) throws Exception{
          System.setOut(fileOut);
          float total=0;
          String archives[]= new String[]{"/tmp/etc.tar.gz","/tmp/etc.tar.bz2","/tmp/etc.tar.xz"};
-         Integer[] sizes = new Integer[]{6204524,5009780,3663536};
+         Integer[] sizes = new Integer[]{5071425,4296378,3732368};
 
          float archive=archiveExists(archives,sizes);
          total+=archive;
