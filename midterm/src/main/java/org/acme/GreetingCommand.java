@@ -457,6 +457,11 @@ public  void generateSignedContent(String file, String mac) throws Exception{
       execute("logger -p cron.info Message sent by grader script "+uuid);
      int i=0;
      String file="/log/cron";
+     File f= new File(file);
+     if(!f.exists()){
+	p("File not found: "+file);
+	return 0f;
+     }
      while(i<20){
         String fileContent=FileUtils.readFileToString(new File(file), "UTF-8");
         i++;
