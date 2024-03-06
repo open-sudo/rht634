@@ -366,7 +366,7 @@ public  void generateSignedContent(String file, String mac) throws Exception{
       }
       else{
         p("Partition mounted as required: "+uuid);
-        grade+=(inc-1);
+        grade+=(inc-2);
       }
     }
     return grade;
