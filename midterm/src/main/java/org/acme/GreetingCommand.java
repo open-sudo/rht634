@@ -451,6 +451,25 @@ public  void generateSignedContent(String file, String mac) throws Exception{
     }
     return 0f;
    }
+
+  public float evaluateCronRedirection()throws Exception{
+      String uuid=UUID.randomUUID().toString();
+      execute("logger -p cron.info Message sent by grader script "+uuid);
+     int i=0;
+     String file="/log/cron";
+     while(i<20){
+        String fileContent=FileUtils.readFileToString(new File(file), "UTF-8");
+        i++;
+        if(fileContent.contains(uuid)){
+               System.out.println("Test content found in:"+file);
+                return 10f;
+        }
+        System.out.println("Test content not found in:"+file+". Retrying ...");
+        Thread.sleep(1000);
+     }
+     return 0;
+    }
+
    @Override
     public void run(){
      try{
@@ -476,6 +495,8 @@ public  void generateSignedContent(String file, String mac) throws Exception{
          total+=tune;
          float vol=volume();
          total+=vol;
+         float redirection=evaluateCronRedirection();
+         total+=redirection;
          System.out.println("Final grade:"+total);
 		  generateSignedContent("./output.txt",getMacAddress());
       }catch(Exception e){
