@@ -118,7 +118,7 @@ public String getMacAddress()throws Exception{
 public float tuning()throws Exception{
   float grade=0f;
   float inc=2.5f;
-  String profiles[]=new String[]{"balanced","powersave","virtual-guest","desktop","aws"};
+  String profiles[]=new String[]{"balanced","powersave","virtual-guest","desktop","accelerator-performance","intel-sst","optimize-serial-console"};
   String installed=execute("dnf list installed tuned").replaceAll("\\s+", "").toLowerCase();
   if(installed.contains("installed") && installed.contains("packages") && installed.contains("tuned")){
     p("tuned daemon properly installed");
